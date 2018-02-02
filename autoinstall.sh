@@ -21,7 +21,7 @@ install_vimrc () {
 
     # symlink ~/.vimrc
     cd ~
-    ln -fs "$INSTALL_DIR/mattsvimrc/.vimrc" .vimrc    
+    ln -fns "$INSTALL_DIR/mattsvimrc/.vimrc" vimrc    
 
     
     # install vim plugins
