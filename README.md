@@ -5,5 +5,7 @@ Most of these scripts are copied from https://github.com/nvie/vimrc/ . I dont cl
 
 Quick install
 =============
-Copy and paste this script to install and configure this vimrc in your `$HOME` dir::
+Copy and paste this script to install and configure this vimrc in your `$HOME` dir:
+```bash
     wget -O - https://github.com/matthewdippel/mattsvimrc/raw/master/autoinstall.sh | sh
+```
