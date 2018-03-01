@@ -23,6 +23,9 @@ install_vimrc () {
     cd ~
     ln -fs "$INSTALL_DIR/mattsvimrc/vimrc" ~/.vimrc    
 
+    # get cool colors
+    git clone https://github.com/fcevado/molokai_dark.git
+    ln -fs "$INSTALL_DIR/molokai_dark/colors/molokai_dark.vim" ~/.vim/colors/molokai_dark.vim
     
     # install vim plugins
     vim +PluginInstall +qall
