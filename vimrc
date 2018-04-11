@@ -13,7 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'rust-lang/rust.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -23,6 +24,7 @@ colorscheme molokai_dark " color scheme choice
 
 set tabstop=4 " number of spaces used to visually display TAB
 set softtabstop=4 " number of spaces a tab counts for when editting, number inserted
+set shiftwidth=4 " when indenting with >, use 4 spaces width
 set expandtab " tabs are now inserted as spaces
 
 set number " show line numbers
@@ -49,30 +51,33 @@ function! ToggleNumber()
         endif
 endfunc
 
-let g:netrw_banner = 0
-let g:netrw_keepdir = 1
-let g:netrw_liststyle = 3 "or 1
+" let g:netrw_banner = 0
+" let g:netrw_keepdir = 1
+" let g:netrw_liststyle = 3 "or 1
 
 " browse split options:
 " 1 - open in horz split
 " 2 - open in vert split
 " 3 - open in new tab
 " 4 - open in prev window
-let g:netrw_browse_split = 4 
+" let g:netrw_browse_split = 4 
 
 " set percentage of explorer window
-let g:netrw_winsize = 25
-let g:netrw_sort_options = 'i'
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
+" let g:netrw_winsize = 25
+" let g:netrw_sort_options = 'i'
+" augroup ProjectDrawer
+  " autocmd!
+  " autocmd VimEnter * :Vexplore
+" augroup END
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_python_flake8_exec = 'python2'
+" let g:syntastic_python_flake8_args = ['-m', 'flake8']
+let loaded_netrwPlugin = 1
