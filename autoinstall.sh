@@ -24,6 +24,7 @@ install_vimrc () {
     ln -fs "$INSTALL_DIR/mattsvimrc/vimrc" ~/.vimrc    
 
     # get cool colors
+    mkdir -p ~/.vim/colors
     cp "$INSTALL_DIR/mattsvimrc/molokai_dark.vim" ~/.vim/colors/
     
     # install vim plugins
