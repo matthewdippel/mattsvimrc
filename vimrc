@@ -81,3 +81,4 @@ set statusline+=%*
 " let g:syntastic_python_flake8_exec = 'python2'
 " let g:syntastic_python_flake8_args = ['-m', 'flake8']
 let loaded_netrwPlugin = 1
+let g:rustfmt_autosave = 1
